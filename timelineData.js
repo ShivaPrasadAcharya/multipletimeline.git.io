@@ -1,4 +1,4 @@
-const timelineData = {
+export const timelineData = {
     timeline1: {
         name: "Technology Evolution",
         items: [
