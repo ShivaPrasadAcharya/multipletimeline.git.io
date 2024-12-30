@@ -1,34 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Timelines</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.2/vis-timeline-graph2d.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.2/vis-timeline-graph2d.min.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Interactive Timelines</h1>
-        <nav>
-            <select id="timelineSelector">
-                <option value="timeline1">Technology Evolution</option>
-                <option value="timeline2">Historical Events</option>
-                <option value="timeline3">Scientific Discoveries</option>
-            </select>
-        </nav>
-    </header>
-
-    <main>
-        <div id="timeline-container"></div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Multiple Timeline Project</p>
-    </footer>
-
-    <script src="timelineData.js"></script>
-    <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Timeline Viewer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
 </html>
