@@ -8,6 +8,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -29,9 +32,9 @@ nav {
 }
 
 main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    flex: 1;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 #timeline-container {
@@ -39,7 +42,8 @@ main {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 600px;
+    height: calc(100vh - 200px); /* Adjust height to fill available space */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 footer {
@@ -47,9 +51,6 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Timeline Customization */
@@ -63,6 +64,7 @@ footer {
     background-color: #2196F3;
     color: white;
     border-radius: 4px;
+    padding: 8px;
 }
 
 .vis-item.vis-selected {
@@ -72,4 +74,36 @@ footer {
 
 .vis-time-axis .vis-text {
     color: #333;
+}
+
+/* Custom styles for vertical timeline */
+.vis-panel.vis-center {
+    overflow-y: auto;
+}
+
+.vis-labelset {
+    width: 100px !important;
+}
+
+/* Improve visibility of timeline items */
+.vis-item .vis-item-content {
+    padding: 5px 8px;
+}
+
+/* Custom scrollbar styles */
+#timeline-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#timeline-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#timeline-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#timeline-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
